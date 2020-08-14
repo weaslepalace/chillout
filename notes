@@ -1,0 +1,8 @@
+To git <gio/gio.h> on Fedora, do dnf install gvfs.devel
+Include <glib-2.0/gio/gio.h> on Fedora. There may be a way to configure it to drop the glib-2.0
+Yeah, there must be a config thing somewhere. I think I saw something like that somewhere. The depenedencies are within gio.h are looking for gio/ as the top level directory.
+Use pkg-config --cflags glib-2.0 --libs glib-2.0 to pull up inculde and linker flags relating to glib-2.0. This can be used in the makefile or gcc command. It adds -I/usr/include/glib-2.0 and -lglib-2.0 to the command.
+Use gio-2.0 and not glib-2.0 with pkg-config. glib-2.0 is a dependancy and thus included in gio-2.0
+There is something wrong with the signal handler, and I'm not seeing anything useful on the Google. Let's try using the high-level library. I think that bus proxy is what I want. It will probably transfer to C++ easier too since it uses native objects (I think).
+Weird stuff with the main loop. If it's not running, the signals will not be caught. If it is running before the "Lock" method call, the call doesn't go through. Things seem to work if it's running after makeing the method call.
+Wow! There are 13 tabs open relating to GLib or DBus. Not the simplest framework.
