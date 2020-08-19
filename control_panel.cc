@@ -19,6 +19,22 @@ ControlPanel::ControlPanel(BreakList& break_list)
 	builder->get_widget("btn_add", btn_add);
 	btn_add->signal_clicked()
 		.connect(sigc::mem_fun(*this, &ControlPanel::handle_add_click));
+
+	builder->get_widget("pop_add_break", pop_add_break);
+	builder->get_widget("spn_start_hour", spn_hour);
+	builder->get_widget("spn_start_min", spn_min);
+	builder->get_widget("rad_start_rel", rad_relative);
+	builder->get_widget("rad_start_abs", rad_absolute);
+	builder->get_widget("chk_start_reoccuring", chk_reoccuring);
+	builder->get_widget("spn_duration", spn_duration);
+	builder->get_widget("lbl_break_description", lbl_break_desc);
+	builder->get_widget("btn_add_commit", btn_add_commit);
+	
+	rad_relative->signal_toggled()
+		.connect(sigc::mem_fun(
+			*this,
+			&ControlPanel::handle_rad_relative_select));
+	
 }
 
 
@@ -41,17 +57,18 @@ std::pair<int, int> ControlPanel::get_hhmm_local()
 
 void ControlPanel::handle_add_click()
 {
-	Gtk::Popover *pop_add_break;	
-	builder->get_widget("pop_add_break", pop_add_break);
-	
+	//Initialize start time spin buttons with local time
 	std::pair<int, int> hhmm = get_hhmm_local();	
-
-	Gtk::SpinButton *spn_hour;
-	Gtk::SpinButton *spn_min;
-	builder->get_widget("spn_start_hour", spn_hour);
-	builder->get_widget("spn_start_min", spn_min);
 	spn_hour->set_value(hhmm.first * 1.0);
 	spn_min->set_value(hhmm.second * 1.0);
 
 	pop_add_break->popup();	
+}
+
+
+void ControlPanel::handle_rad_relative_select()
+{
+	chk_reoccuring->show();
+	spn_hour->set_value(0.0);
+	spn_min->set_value(5.0);
 }

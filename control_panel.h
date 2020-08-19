@@ -11,14 +11,15 @@
 #include <gtkmm/treeviewcolumn.h>
 #include <gtkmm/popover.h>
 #include <gtkmm/spinbutton.h>
-
+#include <gtkmm/checkbutton.h>
+#include <gtkmm/radiobutton.h>
+#include <gtkmm/label.h>
 /**
  *	
  */
 class ControlPanel : public Gtk::Window
 {
 	public:
-//	ControlPanel();
 	ControlPanel(BreakList& break_list);
 	virtual ~ControlPanel();
 	Gtk::Window *win;	
@@ -30,12 +31,23 @@ class ControlPanel : public Gtk::Window
 	Gtk::TreeView *view_break_list;
 //	Gtk::Expander *exp_show_list;
 	Gtk::Button *btn_add;
+	Gtk::Popover *pop_add_break;	
+	Gtk::SpinButton *spn_hour;
+	Gtk::SpinButton *spn_min;
+	Gtk::SpinButton *spn_duration;
+	Gtk::RadioButton *rad_relative;
+	Gtk::RadioButton *rad_absolute;
+	Gtk::CheckButton *chk_reoccuring;
+	Gtk::Label *lbl_break_desc;
+	Gtk::Button *btn_add_commit;
 
 	void handle_add_click();
+	void handle_rad_relative_select();
 
 	private:
 	std::pair<int, int> get_hhmm_local();
 };
+
 
 
 #endif // CHILL_OUT_CONTROL_PANEL
