@@ -9,6 +9,7 @@
 #include <gtkmm/treeview.h>
 //#include <gtkmm/liststore.h>
 #include <gtkmm/treeviewcolumn.h>
+#include <gtkmm/popover.h>
 
 /**
  *	
@@ -16,8 +17,8 @@
 class ControlPanel : public Gtk::Window
 {
 	public:
-	ControlPanel();
-//	ControlPanel(BreakList& break_list);
+//	ControlPanel();
+	ControlPanel(BreakList& break_list);
 	virtual ~ControlPanel();
 	Gtk::Window *win;	
 
@@ -25,8 +26,11 @@ class ControlPanel : public Gtk::Window
 	Glib::RefPtr<Gtk::Builder>	builder;
 
 //	BreakList& break_list;
-//	Gtk::TreeView *view_break_list;
+	Gtk::TreeView *view_break_list;
 //	Gtk::Expander *exp_show_list;
+	Gtk::Button *btn_add;
+
+	void handle_add_click();
 };
 
 

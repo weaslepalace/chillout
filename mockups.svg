@@ -7,34 +7,34 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   sodipodi:docname="mockups.svg"
-   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
-   id="svg8"
-   version="1.1"
-   viewBox="0 0 210 297"
+   width="210mm"
    height="297mm"
-   width="210mm">
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   sodipodi:docname="mockups.svg">
   <defs
      id="defs2" />
   <sodipodi:namedview
-     inkscape:window-maximized="1"
-     inkscape:window-y="0"
-     inkscape:window-x="0"
-     inkscape:window-height="1061"
-     inkscape:window-width="1920"
-     showgrid="false"
-     inkscape:document-rotation="0"
-     inkscape:current-layer="g1270"
-     inkscape:document-units="mm"
-     inkscape:cy="280.30183"
-     inkscape:cx="371.65638"
-     inkscape:zoom="1.4"
-     inkscape:pageshadow="2"
-     inkscape:pageopacity="0.0"
-     borderopacity="1.0"
-     bordercolor="#666666"
+     id="base"
      pagecolor="#ffffff"
-     id="base" />
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="371.65638"
+     inkscape:cy="651.7304"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1034"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1" />
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -43,493 +43,606 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <g
-     id="layer1"
+     inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     inkscape:label="Layer 1">
+     id="layer1">
     <g
        id="g1183">
       <ellipse
-         ry="9.6398687"
-         rx="10.239316"
-         cy="117.03312"
-         cx="21.439772"
+         style="fill:none;fill-opacity:0.305649;stroke:#000000;stroke-width:1;stroke-linejoin:round"
          id="path833-6-5-7"
-         style="fill:none;fill-opacity:0.305649;stroke:#000000;stroke-width:1;stroke-linejoin:round" />
+         cx="21.439772"
+         cy="117.03312"
+         rx="10.239316"
+         ry="9.6398687" />
       <path
-         id="path902-0"
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          d="m 17.758903,113.40417 0.01625,8.01723 8.249036,-3.86392 z"
-         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         id="path902-0" />
     </g>
     <text
-       id="text1027"
-       y="113.94125"
-       x="34.329269"
+       xml:space="preserve"
        style="font-size:4.93889px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
-       xml:space="preserve"><tspan
-         style="font-size:4.93889px;stroke-width:0.264583"
-         y="113.94125"
-         x="34.329269"
+       x="34.329269"
+       y="113.94125"
+       id="text1027"><tspan
+         sodipodi:role="line"
          id="tspan1025"
-         sodipodi:role="line">Pause / Run</tspan></text>
+         x="34.329269"
+         y="113.94125"
+         style="font-size:4.93889px;stroke-width:0.264583">Pause / Run</tspan></text>
     <text
-       id="text1031"
-       y="120.47944"
-       x="36.110363"
+       xml:space="preserve"
        style="font-size:2.82223px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
-       xml:space="preserve"><tspan
-         style="stroke-width:0.264583"
-         y="120.47944"
-         x="36.110363"
+       x="36.110363"
+       y="120.47944"
+       id="text1031"><tspan
+         sodipodi:role="line"
          id="tspan1029"
-         sodipodi:role="line">Push this to pause the app if a break isn't desired</tspan><tspan
-         id="tspan1033"
-         style="stroke-width:0.264583"
-         y="124.00723"
          x="36.110363"
-         sodipodi:role="line">May only be paused for up to an maximum (configurable)</tspan></text>
+         y="120.47944"
+         style="stroke-width:0.264583">Push this to pause the app if a break isn't desired</tspan><tspan
+         sodipodi:role="line"
+         x="36.110363"
+         y="124.00723"
+         style="stroke-width:0.264583"
+         id="tspan1033">May only be paused for up to an maximum (configurable)</tspan></text>
     <g
-       transform="translate(-31.025054,-6.2469425)"
-       id="g1270">
+       id="g1270"
+       transform="translate(-31.025054,-6.2469425)">
       <g
-         id="g846"
-         transform="translate(-10.140393,-47.909958)">
+         transform="translate(-10.140393,-47.909958)"
+         id="g846">
         <ellipse
-           ry="9.6398687"
-           rx="10.239316"
-           cy="110.47978"
-           cx="121.76591"
+           style="fill:none;fill-opacity:0.305649;stroke:#000000;stroke-width:1;stroke-linejoin:round"
            id="path833"
-           style="fill:none;fill-opacity:0.305649;stroke:#000000;stroke-width:1;stroke-linejoin:round" />
+           cx="121.76591"
+           cy="110.47978"
+           rx="10.239316"
+           ry="9.6398687" />
         <rect
-           ry="0.015950063"
-           y="105.91505"
-           x="119.34484"
-           height="9.2257929"
-           width="4.7824349"
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.01798;stroke-linejoin:round"
            id="rect835"
-           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.01798;stroke-linejoin:round" />
+           width="4.7824349"
+           height="9.2257929"
+           x="119.34484"
+           y="105.91505"
+           ry="0.015950063" />
         <rect
-           ry="0.015334059"
-           y="108.7171"
-           x="115.80888"
-           height="3.6498995"
-           width="11.875486"
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.983546;stroke-linejoin:round"
            id="rect837"
-           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.983546;stroke-linejoin:round" />
+           width="11.875486"
+           height="3.6498995"
+           x="115.80888"
+           y="108.7171"
+           ry="0.015334059" />
       </g>
       <g
          id="g1245">
         <ellipse
-           ry="9.6398687"
-           rx="10.239316"
-           cy="62.654713"
-           cx="60.67625"
-           id="path833-6-5"
-           style="fill:none;fill-opacity:0.305649;stroke:#000000;stroke-width:1;stroke-linejoin:round" />
-        <path
-           id="path902"
-           d="m 56.995382,59.025765 0.01625,8.01723 8.249036,-3.86392 z"
-           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      </g>
-      <g
-         id="g998"
-         transform="translate(-5.8217192,-72.146205)">
-        <ellipse
            style="fill:none;fill-opacity:0.305649;stroke:#000000;stroke-width:1;stroke-linejoin:round"
-           id="path833-6"
-           cx="92.877312"
-           cy="134.65033"
+           id="path833-6-5"
+           cx="60.67625"
+           cy="62.654713"
            rx="10.239316"
            ry="9.6398687" />
+        <path
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 56.995382,59.025765 0.01625,8.01723 8.249036,-3.86392 z"
+           id="path902" />
+      </g>
+      <g
+         transform="translate(-5.8217192,-72.146205)"
+         id="g998">
+        <ellipse
+           ry="9.6398687"
+           rx="10.239316"
+           cy="134.65033"
+           cx="92.877312"
+           id="path833-6"
+           style="fill:none;fill-opacity:0.305649;stroke:#000000;stroke-width:1;stroke-linejoin:round" />
         <g
-           transform="translate(-0.01347278,-1.1001543)"
-           id="g923">
+           id="g923"
+           transform="translate(-0.01347278,-1.1001543)">
           <rect
-             style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.14361;stroke-linejoin:round"
-             id="rect917"
-             width="7.1051207"
-             height="4.7132401"
-             x="89.198875"
+             ry="0.021281661"
              y="135.74091"
-             ry="0.021281661" />
+             x="89.198875"
+             height="4.7132401"
+             width="7.1051207"
+             id="rect917"
+             style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.14361;stroke-linejoin:round" />
           <path
-             style="fill:none;stroke:#000000;stroke-width:1.665;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-             d="m 89.89429,136.62991 c 0,0 -0.09293,-2.57267 0.218338,-3.44867 0.411953,-1.15934 1.105865,-2.07459 2.333559,-2.15546 1.122024,-0.0739 1.926404,0.68035 2.398524,1.70089 0.461089,0.99669 0.396247,3.88625 0.396247,3.88625"
+             sodipodi:nodetypes="csssc"
              id="path919"
-             sodipodi:nodetypes="csssc" />
+             d="m 89.89429,136.62991 c 0,0 -0.09293,-2.57267 0.218338,-3.44867 0.411953,-1.15934 1.105865,-2.07459 2.333559,-2.15546 1.122024,-0.0739 1.926404,0.68035 2.398524,1.70089 0.461089,0.99669 0.396247,3.88625 0.396247,3.88625"
+             style="fill:none;stroke:#000000;stroke-width:1.665;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
         </g>
       </g>
       <g
          id="g1239">
         <rect
-           ry="0.010071401"
-           y="36.268208"
-           x="46.885494"
-           height="11.002234"
-           width="76.774521"
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.811429;stroke-linejoin:round"
            id="rect841"
-           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.811429;stroke-linejoin:round" />
+           width="76.774521"
+           height="11.002234"
+           x="46.885494"
+           y="36.268208"
+           ry="0.010071401" />
         <rect
-           ry="0.01007139"
-           y="39.091686"
-           x="80.189484"
-           height="5.2738752"
-           width="38.998383"
+           style="fill:#e10000;fill-opacity:1;stroke:#e40000;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            id="rect953"
-           style="fill:#e10000;fill-opacity:1;stroke:#e40000;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+           width="38.998383"
+           height="5.2738752"
+           x="80.189484"
+           y="39.091686"
+           ry="0.01007139" />
       </g>
       <rect
-         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.9;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="rect973"
-         width="93.198242"
-         height="59.284245"
-         x="39.811943"
+         ry="0.01007139"
          y="28.223415"
-         ry="0.01007139" />
+         x="39.811943"
+         height="59.284245"
+         width="93.198242"
+         id="rect973"
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.9;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
       <path
-         id="path902-1"
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.154193px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          d="m 112.60884,79.570375 0.01,4.55661 4.92934,-2.19607 z"
-         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.154193px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         id="path902-1" />
       <text
-         xml:space="preserve"
-         style="font-size:2.82223px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
-         x="49.358997"
+         id="text992"
          y="34.362774"
-         id="text992"><tspan
-           id="tspan1324"
-           sodipodi:role="line"
-           x="49.358997"
+         x="49.358997"
+         style="font-size:2.82223px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+         xml:space="preserve"><tspan
+           style="stroke-width:0.264583"
            y="34.362774"
-           style="stroke-width:0.264583">Next Break in 5:01</tspan></text>
+           x="49.358997"
+           sodipodi:role="line"
+           id="tspan1324">Next Break in 5:01</tspan></text>
       <g
-         id="g1070"
-         transform="matrix(1,0,0,1.1223102,-5.7293233,-89.148228)">
+         transform="matrix(1,0,0,1.1223102,-5.7293233,-89.148228)"
+         id="g1070">
         <path
-           id="path1035"
+           style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
            d="m 51.212913,150.77708 6.505298,-0.0627 -0.236993,0.17644"
+           id="path1035" />
+        <path
+           id="path1035-9"
+           d="m 51.13921,152.35195 6.505298,-0.0627 -0.236993,0.17644"
            style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
         <path
            style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           d="m 51.13921,152.35195 6.505298,-0.0627 -0.236993,0.17644"
-           id="path1035-9" />
-        <path
-           id="path1035-9-3"
            d="m 51.15748,153.80157 6.505298,-0.0627 -0.236993,0.17644"
-           style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+           id="path1035-9-3" />
       </g>
       <text
-         id="text1330"
-         y="98.025024"
+         xml:space="preserve"
+         style="font-size:2.82223px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
          x="209.74504"
-         style="font-size:2.82223px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
-         xml:space="preserve"><tspan
-           style="stroke-width:0.264583"
-           y="98.025024"
-           x="209.74504"
+         y="98.025024"
+         id="text1330"><tspan
+           sodipodi:role="line"
            id="tspan1328"
-           sodipodi:role="line">16:00 for 5:00</tspan></text>
+           x="209.74504"
+           y="98.025024"
+           style="stroke-width:0.264583">16:00 for 5:00</tspan></text>
       <text
-         id="text1334"
-         y="101.67707"
+         xml:space="preserve"
+         style="font-size:2.82223px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
          x="210.19832"
+         y="101.67707"
+         id="text1334"><tspan
+           sodipodi:role="line"
+           id="tspan1332"
+           x="210.19832"
+           y="101.67707"
+           style="stroke-width:0.264583">17:00 quit</tspan></text>
+      <rect
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.799844;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect1336"
+         width="93.157112"
+         height="17.468824"
+         x="140.50734"
+         y="87.764206"
+         ry="0.007946006" />
+      <rect
+         ry="0.010134384"
+         y="200.22339"
+         x="73.073532"
+         height="38.343712"
+         width="56.520519"
+         id="rect923"
+         style="fill:none;stroke:#000000;stroke-width:1.01537;stroke-linejoin:round" />
+      <text
+         id="text927"
+         y="205.31268"
+         x="77.350021"
          style="font-size:2.82223px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
          xml:space="preserve"><tspan
            style="stroke-width:0.264583"
-           y="101.67707"
-           x="210.19832"
-           id="tspan1332"
-           sodipodi:role="line">17:00 quit</tspan></text>
-      <rect
-         ry="0.007946006"
-         y="87.764206"
-         x="140.50734"
-         height="17.468824"
-         width="93.157112"
-         id="rect1336"
-         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.799844;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-    </g>
-    <g
-       transform="translate(-71.089879,11.183168)"
-       id="g998-6">
-      <ellipse
-         style="fill:none;fill-opacity:0.305649;stroke:#000000;stroke-width:1;stroke-linejoin:round"
-         id="path833-6-0"
-         cx="92.877312"
-         cy="134.65033"
-         rx="10.239316"
-         ry="9.6398687" />
-      <g
-         transform="translate(-0.01347278,-1.1001543)"
-         id="g923-6">
-        <rect
-           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.14361;stroke-linejoin:round"
-           id="rect917-2"
-           width="7.1051207"
-           height="4.7132401"
-           x="89.198875"
-           y="135.74091"
-           ry="0.021281661" />
-        <path
-           style="fill:none;stroke:#000000;stroke-width:1.665;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           d="m 89.89429,136.62991 c 0,0 -0.09293,-2.57267 0.218338,-3.44867 0.411953,-1.15934 1.105865,-2.07459 2.333559,-2.15546 1.122024,-0.0739 1.926404,0.68035 2.398524,1.70089 0.461089,0.99669 0.396247,3.88625 0.396247,3.88625"
-           id="path919-6"
-           sodipodi:nodetypes="csssc" />
-      </g>
-    </g>
-    <text
-       id="text1101"
-       y="141.73206"
-       x="34.26088"
-       style="font-size:4.9389px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
-       xml:space="preserve"><tspan
-         style="stroke-width:0.264583"
-         y="141.73206"
-         x="34.26088"
-         id="tspan1099"
-         sodipodi:role="line">Lock the screen</tspan></text>
-    <text
-       id="text1105"
-       y="146.74388"
-       x="38.435921"
-       style="font-size:2.82223px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
-       xml:space="preserve"><tspan
-         style="stroke-width:0.264583"
-         y="146.74388"
-         x="38.435921"
-         id="tspan1103"
-         sodipodi:role="line">Put another way, this button tells the app that you're taking your break early</tspan></text>
-    <g
-       id="g846-1"
-       transform="translate(-100.41592,62.972785)">
-      <ellipse
-         ry="9.6398687"
-         rx="10.239316"
-         cy="110.47978"
-         cx="121.76591"
-         id="path833-8"
-         style="fill:none;fill-opacity:0.305649;stroke:#000000;stroke-width:1;stroke-linejoin:round" />
-      <rect
-         ry="0.015950063"
-         y="105.91505"
-         x="119.34484"
-         height="9.2257929"
-         width="4.7824349"
-         id="rect835-7"
-         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.01798;stroke-linejoin:round" />
-      <rect
-         ry="0.015334059"
-         y="108.7171"
-         x="115.80888"
-         height="3.6498995"
-         width="11.875486"
-         id="rect837-9"
-         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.983546;stroke-linejoin:round" />
-    </g>
-    <text
-       id="text1133"
-       y="167.11081"
-       x="34.020805"
-       style="font-size:4.9389px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
-       xml:space="preserve"><tspan
-         style="stroke-width:0.264583"
-         y="167.11081"
-         x="34.020805"
-         id="tspan1131"
-         sodipodi:role="line">Add another break</tspan><tspan
-         id="tspan1135"
-         style="stroke-width:0.264583"
-         y="173.28444"
-         x="34.020805"
-         sodipodi:role="line" /></text>
-    <text
-       id="text1139"
-       y="170.61896"
-       x="38.990028"
-       style="font-size:2.82223px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
-       xml:space="preserve"><tspan
-         style="stroke-width:0.264583"
-         y="170.61896"
-         x="38.990028"
-         id="tspan1137"
-         sodipodi:role="line">This will bring up a dialog where a new break can be entered</tspan><tspan
-         id="tspan1141"
-         style="stroke-width:0.264583"
-         y="174.14674"
-         x="38.990028"
-         sodipodi:role="line">Breaks can either be absolute (15:06) or relative (in an hour), or </tspan><tspan
-         id="tspan1143"
-         style="stroke-width:0.264583"
-         y="177.67453"
-         x="38.990028"
-         sodipodi:role="line">periodic (every 2 hours)</tspan></text>
-    <g
-       transform="translate(-2.2634277,-0.871117)"
-       id="g1205">
-      <ellipse
-         style="fill:none;fill-opacity:0.305649;stroke:#000000;stroke-width:1;stroke-linejoin:round"
-         id="path833-6-5-7-0"
-         cx="131.84531"
-         cy="118.46095"
-         rx="10.239316"
-         ry="9.6398687" />
-      <rect
-         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.899999;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="rect1185"
-         width="4.1332812"
-         height="9.3805342"
-         x="126.19925"
-         y="113.98112"
-         ry="0.01007139" />
-      <rect
-         ry="0.01007139"
-         y="114.07555"
-         x="133.38367"
-         height="9.3805342"
-         width="4.1332812"
-         id="rect1185-2"
-         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.899999;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-    </g>
-    <g
-       id="g846-3"
-       transform="translate(59.580023,-53.850279)">
-      <ellipse
-         ry="9.6398687"
-         rx="10.239316"
-         cy="110.47978"
-         cx="121.76591"
-         id="path833-7"
-         style="fill:none;fill-opacity:0.305649;stroke:#000000;stroke-width:1;stroke-linejoin:round" />
-      <rect
-         ry="0.015950063"
-         y="105.91505"
-         x="119.34484"
-         height="9.2257929"
-         width="4.7824349"
-         id="rect835-5"
-         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.01798;stroke-linejoin:round" />
-      <rect
-         ry="0.015334059"
-         y="108.7171"
-         x="115.80888"
-         height="3.6498995"
-         width="11.875486"
-         id="rect837-92"
-         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.983546;stroke-linejoin:round" />
-    </g>
-    <rect
-       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.811429;stroke-linejoin:round"
-       id="rect841-2"
-       width="76.774521"
-       height="11.002234"
-       x="116.60591"
-       y="30.327885"
-       ry="0.010071401" />
-    <g
-       id="g1002"
-       transform="translate(63.898697,-78.086525)">
-      <ellipse
-         ry="9.6398687"
-         rx="10.239316"
-         cy="134.80092"
-         cx="66.497971"
-         id="path833-6-5-8"
-         style="fill:none;fill-opacity:0.305649;stroke:#000000;stroke-width:1;stroke-linejoin:round" />
+           y="205.31268"
+           x="77.350021"
+           id="tspan925"
+           sodipodi:role="line">Add a new break</tspan></text>
       <path
-         id="path902-9"
-         d="m 62.817101,131.17197 0.01625,8.01723 8.249036,-3.86392 z"
-         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         id="path929"
+         d="m 75.897176,207.00249 49.085964,-0.14765 v 0"
+         style="fill:none;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <text
+         id="text933"
+         y="213.06194"
+         x="77.663773"
+         style="font-size:2.82223px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+         xml:space="preserve"><tspan
+           style="stroke-width:0.264583"
+           y="213.06194"
+           x="77.663773"
+           id="tspan931"
+           sodipodi:role="line">Time</tspan></text>
+      <rect
+         ry="0.007945993"
+         y="215.08026"
+         x="77.858665"
+         height="4.3002176"
+         width="22.910378"
+         id="rect935"
+         style="fill:none;stroke:#000000;stroke-width:0.264999;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none" />
+      <ellipse
+         ry="1.3026153"
+         rx="1.2911726"
+         cy="213.75328"
+         cx="105.48931"
+         id="path937"
+         style="fill:none;stroke:#000000;stroke-width:0.264999;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none" />
+      <ellipse
+         style="fill:none;stroke:#000000;stroke-width:0.264999;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+         id="path937-3"
+         cx="105.54616"
+         cy="217.64563"
+         rx="1.2911726"
+         ry="1.3026153" />
+      <text
+         id="text956"
+         y="214.7606"
+         x="108.6017"
+         style="font-size:2.82223px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+         xml:space="preserve"><tspan
+           style="stroke-width:0.264583"
+           y="214.7606"
+           x="108.6017"
+           id="tspan954"
+           sodipodi:role="line">Absolute</tspan></text>
+      <text
+         id="text960"
+         y="218.77733"
+         x="108.70358"
+         style="font-size:2.82223px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+         xml:space="preserve"><tspan
+           id="tspan962"
+           style="stroke-width:0.264583"
+           y="218.77733"
+           x="108.70358"
+           sodipodi:role="line">Relative</tspan></text>
+      <text
+         id="text968"
+         y="225.86292"
+         x="78.280937"
+         style="font-size:2.82223px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+         xml:space="preserve"><tspan
+           style="stroke-width:0.264583"
+           y="225.86292"
+           x="78.280937"
+           id="tspan966"
+           sodipodi:role="line">Duration</tspan></text>
+      <rect
+         ry="0.007945993"
+         y="227.73212"
+         x="78.060936"
+         height="4.0167351"
+         width="22.671926"
+         id="rect970"
+         style="fill:none;stroke:#000000;stroke-width:0.264999;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none" />
     </g>
     <g
-       id="g998-7"
-       transform="translate(63.898697,-78.086525)">
+       id="g998-6"
+       transform="translate(-71.089879,11.183168)">
       <ellipse
-         style="fill:none;fill-opacity:0.305649;stroke:#000000;stroke-width:1;stroke-linejoin:round"
-         id="path833-6-3"
-         cx="92.877312"
-         cy="134.65033"
+         ry="9.6398687"
          rx="10.239316"
-         ry="9.6398687" />
+         cy="134.65033"
+         cx="92.877312"
+         id="path833-6-0"
+         style="fill:none;fill-opacity:0.305649;stroke:#000000;stroke-width:1;stroke-linejoin:round" />
       <g
-         transform="translate(-0.01347278,-1.1001543)"
-         id="g923-61">
+         id="g923-6"
+         transform="translate(-0.01347278,-1.1001543)">
         <rect
-           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.14361;stroke-linejoin:round"
-           id="rect917-29"
-           width="7.1051207"
-           height="4.7132401"
-           x="89.198875"
+           ry="0.021281661"
            y="135.74091"
-           ry="0.021281661" />
+           x="89.198875"
+           height="4.7132401"
+           width="7.1051207"
+           id="rect917-2"
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.14361;stroke-linejoin:round" />
         <path
-           style="fill:none;stroke:#000000;stroke-width:1.665;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           sodipodi:nodetypes="csssc"
+           id="path919-6"
            d="m 89.89429,136.62991 c 0,0 -0.09293,-2.57267 0.218338,-3.44867 0.411953,-1.15934 1.105865,-2.07459 2.333559,-2.15546 1.122024,-0.0739 1.926404,0.68035 2.398524,1.70089 0.461089,0.99669 0.396247,3.88625 0.396247,3.88625"
-           id="path919-3"
-           sodipodi:nodetypes="csssc" />
+           style="fill:none;stroke:#000000;stroke-width:1.665;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
       </g>
     </g>
-    <rect
-       style="fill:#e10000;fill-opacity:1;stroke:#e40000;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="rect953-1"
-       width="38.998383"
-       height="5.2738752"
-       x="149.9099"
-       y="33.151363"
-       ry="0.01007139" />
-    <rect
-       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.899999;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="rect973-9"
-       width="93.198242"
-       height="59.284245"
-       x="109.53237"
-       y="22.283092"
-       ry="0.01007139" />
-    <path
-       sodipodi:nodetypes="ccccc"
-       id="path902-1-4"
-       d="m 187.22797,73.476834 -4.55334,-0.172745 0.85481,2.146408 1.14181,2.867037 z"
-       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.154193px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.9389px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="34.26088"
+       y="141.73206"
+       id="text1101"><tspan
+         sodipodi:role="line"
+         id="tspan1099"
+         x="34.26088"
+         y="141.73206"
+         style="stroke-width:0.264583">Lock the screen</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:2.82223px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
-       x="119.07941"
-       y="28.422451"
-       id="text992-7"><tspan
+       x="38.435921"
+       y="146.74388"
+       id="text1105"><tspan
          sodipodi:role="line"
-         id="tspan990-8"
-         x="119.07941"
-         y="28.422451"
-         style="stroke-width:0.264583">Next Break in 5:01</tspan></text>
+         id="tspan1103"
+         x="38.435921"
+         y="146.74388"
+         style="stroke-width:0.264583">Put another way, this button tells the app that you're taking your break early</tspan></text>
     <g
-       id="g1070-4"
-       transform="matrix(1,0,0,1.1223102,63.991092,-95.088544)">
-      <path
-         id="path1035-5"
-         d="m 51.212913,150.77708 6.505298,-0.0627 -0.236993,0.17644"
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-      <path
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         d="m 51.13921,152.35195 6.505298,-0.0627 -0.236993,0.17644"
-         id="path1035-9-0" />
-      <path
-         id="path1035-9-3-3"
-         d="m 51.15748,153.80157 6.505298,-0.0627 -0.236993,0.17644"
-         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+       transform="translate(-100.41592,62.972785)"
+       id="g846-1">
+      <ellipse
+         style="fill:none;fill-opacity:0.305649;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+         id="path833-8"
+         cx="121.76591"
+         cy="110.47978"
+         rx="10.239316"
+         ry="9.6398687" />
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.01798;stroke-linejoin:round"
+         id="rect835-7"
+         width="4.7824349"
+         height="9.2257929"
+         x="119.34484"
+         y="105.91505"
+         ry="0.015950063" />
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.983546;stroke-linejoin:round"
+         id="rect837-9"
+         width="11.875486"
+         height="3.6498995"
+         x="115.80888"
+         y="108.7171"
+         ry="0.015334059" />
     </g>
     <text
-       id="text1322"
-       y="87.367126"
-       x="170.92349"
+       xml:space="preserve"
+       style="font-size:4.9389px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="34.020805"
+       y="167.11081"
+       id="text1133"><tspan
+         sodipodi:role="line"
+         id="tspan1131"
+         x="34.020805"
+         y="167.11081"
+         style="stroke-width:0.264583">Add another break</tspan><tspan
+         sodipodi:role="line"
+         x="34.020805"
+         y="173.28444"
+         style="stroke-width:0.264583"
+         id="tspan1135" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:2.82223px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="38.990028"
+       y="170.61896"
+       id="text1139"><tspan
+         sodipodi:role="line"
+         id="tspan1137"
+         x="38.990028"
+         y="170.61896"
+         style="stroke-width:0.264583">This will bring up a dialog where a new break can be entered</tspan><tspan
+         sodipodi:role="line"
+         x="38.990028"
+         y="174.14674"
+         style="stroke-width:0.264583"
+         id="tspan1141">Breaks can either be absolute (15:06) or relative (in an hour), or </tspan><tspan
+         sodipodi:role="line"
+         x="38.990028"
+         y="177.67453"
+         style="stroke-width:0.264583"
+         id="tspan1143">periodic (every 2 hours)</tspan></text>
+    <g
+       id="g1205"
+       transform="translate(-2.2634277,-0.871117)">
+      <ellipse
+         ry="9.6398687"
+         rx="10.239316"
+         cy="118.46095"
+         cx="131.84531"
+         id="path833-6-5-7-0"
+         style="fill:none;fill-opacity:0.305649;stroke:#000000;stroke-width:1;stroke-linejoin:round" />
+      <rect
+         ry="0.01007139"
+         y="113.98112"
+         x="126.19925"
+         height="9.3805342"
+         width="4.1332812"
+         id="rect1185"
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.899999;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.899999;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect1185-2"
+         width="4.1332812"
+         height="9.3805342"
+         x="133.38367"
+         y="114.07555"
+         ry="0.01007139" />
+    </g>
+    <g
+       transform="translate(59.580023,-53.850279)"
+       id="g846-3">
+      <ellipse
+         style="fill:none;fill-opacity:0.305649;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+         id="path833-7"
+         cx="121.76591"
+         cy="110.47978"
+         rx="10.239316"
+         ry="9.6398687" />
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.01798;stroke-linejoin:round"
+         id="rect835-5"
+         width="4.7824349"
+         height="9.2257929"
+         x="119.34484"
+         y="105.91505"
+         ry="0.015950063" />
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.983546;stroke-linejoin:round"
+         id="rect837-92"
+         width="11.875486"
+         height="3.6498995"
+         x="115.80888"
+         y="108.7171"
+         ry="0.015334059" />
+    </g>
+    <rect
+       ry="0.010071401"
+       y="30.327885"
+       x="116.60591"
+       height="11.002234"
+       width="76.774521"
+       id="rect841-2"
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.811429;stroke-linejoin:round" />
+    <g
+       transform="translate(63.898697,-78.086525)"
+       id="g1002">
+      <ellipse
+         style="fill:none;fill-opacity:0.305649;stroke:#000000;stroke-width:1;stroke-linejoin:round"
+         id="path833-6-5-8"
+         cx="66.497971"
+         cy="134.80092"
+         rx="10.239316"
+         ry="9.6398687" />
+      <path
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 62.817101,131.17197 0.01625,8.01723 8.249036,-3.86392 z"
+         id="path902-9" />
+    </g>
+    <g
+       transform="translate(63.898697,-78.086525)"
+       id="g998-7">
+      <ellipse
+         ry="9.6398687"
+         rx="10.239316"
+         cy="134.65033"
+         cx="92.877312"
+         id="path833-6-3"
+         style="fill:none;fill-opacity:0.305649;stroke:#000000;stroke-width:1;stroke-linejoin:round" />
+      <g
+         id="g923-61"
+         transform="translate(-0.01347278,-1.1001543)">
+        <rect
+           ry="0.021281661"
+           y="135.74091"
+           x="89.198875"
+           height="4.7132401"
+           width="7.1051207"
+           id="rect917-29"
+           style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.14361;stroke-linejoin:round" />
+        <path
+           sodipodi:nodetypes="csssc"
+           id="path919-3"
+           d="m 89.89429,136.62991 c 0,0 -0.09293,-2.57267 0.218338,-3.44867 0.411953,-1.15934 1.105865,-2.07459 2.333559,-2.15546 1.122024,-0.0739 1.926404,0.68035 2.398524,1.70089 0.461089,0.99669 0.396247,3.88625 0.396247,3.88625"
+           style="fill:none;stroke:#000000;stroke-width:1.665;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      </g>
+    </g>
+    <rect
+       ry="0.01007139"
+       y="33.151363"
+       x="149.9099"
+       height="5.2738752"
+       width="38.998383"
+       id="rect953-1"
+       style="fill:#e10000;fill-opacity:1;stroke:#e40000;stroke-width:0;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <rect
+       ry="0.01007139"
+       y="22.283092"
+       x="109.53237"
+       height="59.284245"
+       width="93.198242"
+       id="rect973-9"
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.899999;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.154193px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 187.22797,73.476834 -4.55334,-0.172745 0.85481,2.146408 1.14181,2.867037 z"
+       id="path902-1-4"
+       sodipodi:nodetypes="ccccc" />
+    <text
+       id="text992-7"
+       y="28.422451"
+       x="119.07941"
        style="font-size:2.82223px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
        xml:space="preserve"><tspan
          style="stroke-width:0.264583"
-         y="87.367126"
-         x="170.92349"
+         y="28.422451"
+         x="119.07941"
+         id="tspan990-8"
+         sodipodi:role="line">Next Break in 5:01</tspan></text>
+    <g
+       transform="matrix(1,0,0,1.1223102,63.991092,-95.088544)"
+       id="g1070-4">
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 51.212913,150.77708 6.505298,-0.0627 -0.236993,0.17644"
+         id="path1035-5" />
+      <path
+         id="path1035-9-0"
+         d="m 51.13921,152.35195 6.505298,-0.0627 -0.236993,0.17644"
+         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 51.15748,153.80157 6.505298,-0.0627 -0.236993,0.17644"
+         id="path1035-9-3-3" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:2.82223px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="170.92349"
+       y="87.367126"
+       id="text1322"><tspan
+         sodipodi:role="line"
          id="tspan1320"
-         sodipodi:role="line">Upcomming Breaks</tspan></text>
+         x="170.92349"
+         y="87.367126"
+         style="stroke-width:0.264583">Upcomming Breaks</tspan></text>
+    <text
+       id="text974"
+       y="190.70671"
+       x="41.572952"
+       style="font-size:4.93889px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       xml:space="preserve"><tspan
+         style="font-size:4.93889px;stroke-width:0.264583"
+         y="190.70671"
+         x="41.572952"
+         id="tspan972"
+         sodipodi:role="line">This popover will appear when pressing the add button</tspan><tspan
+         id="tspan976"
+         style="font-size:4.93889px;stroke-width:0.264583"
+         y="196.88033"
+         x="41.572952"
+         sodipodi:role="line" /></text>
   </g>
 </svg>

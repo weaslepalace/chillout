@@ -2,6 +2,21 @@
 <!-- Generated with glade 3.36.0 -->
 <interface>
   <requires lib="gtk+" version="3.22"/>
+  <object class="GtkAdjustment" id="adj_duration">
+    <property name="upper">480</property>
+    <property name="step_increment">1</property>
+    <property name="page_increment">10</property>
+  </object>
+  <object class="GtkAdjustment" id="adj_start_hour">
+    <property name="upper">23</property>
+    <property name="step_increment">1</property>
+    <property name="page_increment">10</property>
+  </object>
+  <object class="GtkAdjustment" id="adj_start_minute">
+    <property name="upper">59</property>
+    <property name="step_increment">1</property>
+    <property name="page_increment">10</property>
+  </object>
   <object class="GtkImage" id="ico_add">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
@@ -41,7 +56,7 @@
             <property name="always_show_image">True</property>
           </object>
           <packing>
-            <property name="x">180</property>
+            <property name="x">300</property>
             <property name="y">120</property>
           </packing>
         </child>
@@ -56,7 +71,7 @@
             <property name="always_show_image">True</property>
           </object>
           <packing>
-            <property name="x">300</property>
+            <property name="x">60</property>
             <property name="y">120</property>
           </packing>
         </child>
@@ -84,7 +99,7 @@
             <property name="always_show_image">True</property>
           </object>
           <packing>
-            <property name="x">60</property>
+            <property name="x">180</property>
             <property name="y">120</property>
           </packing>
         </child>
@@ -167,6 +182,200 @@
     </child>
     <child type="titlebar">
       <placeholder/>
+    </child>
+  </object>
+  <object class="GtkPopover" id="pop_add_break">
+    <property name="width_request">240</property>
+    <property name="height_request">300</property>
+    <property name="can_focus">False</property>
+    <property name="relative_to">btn_add</property>
+    <property name="position">left</property>
+    <child>
+      <object class="GtkFixed">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <child>
+          <object class="GtkLabel" id="lbl_add_new_break">
+            <property name="width_request">120</property>
+            <property name="height_request">30</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Add a new break</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkSeparator" id="sep_2">
+            <property name="width_request">200</property>
+            <property name="height_request">5</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+          </object>
+          <packing>
+            <property name="x">5</property>
+            <property name="y">25</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="lbl_add_break_tile">
+            <property name="width_request">90</property>
+            <property name="height_request">30</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Start Time</property>
+          </object>
+          <packing>
+            <property name="y">60</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkRadioButton" id="rad_start_abs">
+            <property name="label" translatable="yes">Absolute</property>
+            <property name="width_request">90</property>
+            <property name="height_request">30</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">False</property>
+            <property name="active">True</property>
+            <property name="draw_indicator">True</property>
+          </object>
+          <packing>
+            <property name="x">210</property>
+            <property name="y">30</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkRadioButton" id="rad_start_rel">
+            <property name="label" translatable="yes">Relative</property>
+            <property name="width_request">90</property>
+            <property name="height_request">30</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">False</property>
+            <property name="active">True</property>
+            <property name="draw_indicator">True</property>
+            <property name="group">rad_start_abs</property>
+          </object>
+          <packing>
+            <property name="x">210</property>
+            <property name="y">60</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="lbl_add_new_duration">
+            <property name="width_request">90</property>
+            <property name="height_request">30</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Duration
+(Minutes)</property>
+          </object>
+          <packing>
+            <property name="y">180</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkSpinButton" id="spn_start_min">
+            <property name="width_request">30</property>
+            <property name="height_request">90</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="max_length">2</property>
+            <property name="width_chars">2</property>
+            <property name="max_width_chars">4</property>
+            <property name="xalign">0.5</property>
+            <property name="input_purpose">number</property>
+            <property name="orientation">vertical</property>
+            <property name="adjustment">adj_start_minute</property>
+            <property name="snap_to_ticks">True</property>
+            <property name="numeric">True</property>
+            <property name="wrap">True</property>
+            <property name="value">0.00000000022351741812</property>
+          </object>
+          <packing>
+            <property name="x">150</property>
+            <property name="y">30</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkSpinButton" id="spn_start_hour">
+            <property name="width_request">30</property>
+            <property name="height_request">90</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="xalign">0.5</property>
+            <property name="input_purpose">digits</property>
+            <property name="orientation">vertical</property>
+            <property name="adjustment">adj_start_hour</property>
+            <property name="snap_to_ticks">True</property>
+            <property name="numeric">True</property>
+            <property name="wrap">True</property>
+          </object>
+          <packing>
+            <property name="x">90</property>
+            <property name="y">30</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkCheckButton" id="chk_start_reoccuring">
+            <property name="label" translatable="yes">Reoccuring</property>
+            <property name="width_request">90</property>
+            <property name="height_request">30</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">False</property>
+            <property name="draw_indicator">True</property>
+          </object>
+          <packing>
+            <property name="x">240</property>
+            <property name="y">90</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkSpinButton" id="spn_duration_hour">
+            <property name="width_request">30</property>
+            <property name="height_request">90</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="input_purpose">digits</property>
+            <property name="orientation">vertical</property>
+            <property name="adjustment">adj_duration</property>
+            <property name="climb_rate">1</property>
+            <property name="snap_to_ticks">True</property>
+            <property name="numeric">True</property>
+            <property name="wrap">True</property>
+            <property name="value">5</property>
+          </object>
+          <packing>
+            <property name="x">90</property>
+            <property name="y">150</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="btn_add_commit">
+            <property name="label" translatable="yes">Commit</property>
+            <property name="width_request">90</property>
+            <property name="height_request">30</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+          </object>
+          <packing>
+            <property name="x">180</property>
+            <property name="y">210</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="lbl_break_description">
+            <property name="width_request">150</property>
+            <property name="height_request">60</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+          </object>
+          <packing>
+            <property name="x">150</property>
+            <property name="y">152</property>
+          </packing>
+        </child>
+      </object>
     </child>
   </object>
 </interface>
