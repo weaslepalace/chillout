@@ -14,6 +14,8 @@
 #include <gtkmm/checkbutton.h>
 #include <gtkmm/radiobutton.h>
 #include <gtkmm/label.h>
+#include <gtkmm/eventbox.h>
+
 /**
  *	
  */
@@ -40,12 +42,16 @@ class ControlPanel : public Gtk::Window
 	Gtk::CheckButton *chk_reoccuring;
 	Gtk::Label *lbl_break_desc;
 	Gtk::Button *btn_add_commit;
+	Gtk::EventBox *evt_box_warning;
+	Gtk::Label *lbl_warning;
 
 	void handle_add_click();
 	void handle_rad_relative_select();
 	void handle_rad_absolute_select();
+	void handle_chk_reoccuring_select();
 	void handle_add_spins();
 	bool handle_min_spin_output();
+	bool handle_evt_box_warning(GdkEventCrossing *evt);
 
 	private:
 	std::pair<int, int> get_hhmm_local();

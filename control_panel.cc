@@ -30,6 +30,8 @@ ControlPanel::ControlPanel(BreakList& break_list)
 	builder->get_widget("spn_duration", spn_duration);
 	builder->get_widget("lbl_break_description", lbl_break_desc);
 	builder->get_widget("btn_add_commit", btn_add_commit);
+	builder->get_widget("evt_box_warning", evt_box_warning);
+	builder->get_widget("lbl_warning", lbl_warning);
 	
 	rad_relative->signal_toggled()
 		.connect(sigc::mem_fun(
@@ -56,6 +58,11 @@ ControlPanel::ControlPanel(BreakList& break_list)
 		.connect(sigc::mem_fun(
 			*this,
 			&ControlPanel::handle_min_spin_output));
+	evt_box_warning->signal_enter_notify_event()
+		.connect(sigc::mem_fun(
+			*this,
+			&ControlPanel::handle_evt_box_warning));
+		
 }
 
 
@@ -76,17 +83,16 @@ std::pair<int, int> ControlPanel::get_hhmm_local()
 }
 
 
+/**
+ *	Handle the click signal for the ADD button
+ */
 void ControlPanel::handle_add_click()
 {
 	//Initialize start time spin buttons with local time
 	std::pair<int, int> hhmm = get_hhmm_local();	
 	spn_hour->set_value(hhmm.first * 1.0);
-	
-	Glib::ustring mm = Glib::ustring::format(
-		std::setfill(L'0'), 
-		std::setw(2),
-		hhmm.second);
-	spn_min->set_text(mm);
+	spn_min->set_value(hhmm.second * 1.0);	
+	lbl_warning->hide();
 
 	pop_add_break->popup();	
 }
@@ -107,6 +113,20 @@ void ControlPanel::handle_rad_absolute_select()
 	std::pair<int, int> hhmm = get_hhmm_local();
 	spn_hour->set_value(hhmm.first * 1.0);
 	spn_min->set_value(hhmm.second * 1.0);
+}
+
+
+void ControlPanel::handle_chk_reoccuring_select()
+{
+	int hour = (int)spn_hour->get_value();
+	int min = (int)spn_min->get_value();
+	int dur = (int)spn_duration->get_value();
+
+	Glib::ustring desc = Glib::ustring::compose(
+		"Add %1 minute break every %2:%3 from now",
+		dur,
+		hour,
+		Glib::ustring::format(std::setfill(L'0'), std::setw(2), min));
 }
 
 
@@ -148,9 +168,15 @@ void ControlPanel::handle_add_spins()
 
 bool ControlPanel::handle_min_spin_output()
 {
-	auto adj = spn_min->get_adjustment();
-	int val = (int)adj->get_value();
+	int val = (int)spn_min->get_value();
 	auto mm = Glib::ustring::format(std::setfill(L'0'), std::setw(2), val);
 	spn_min->set_text(mm);
+	return true;
+}
+
+
+bool ControlPanel::handle_evt_box_warning(GdkEventCrossing *evt)
+{
+	lbl_warning->show();
 	return true;
 }
