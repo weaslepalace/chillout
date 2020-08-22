@@ -1,6 +1,7 @@
 #include "control_panel.h"
 
 #include <iostream>
+#include <iomanip>
 #include <ctime>
 
 
@@ -35,6 +36,26 @@ ControlPanel::ControlPanel(BreakList& break_list)
 			*this,
 			&ControlPanel::handle_rad_relative_select));
 	
+	rad_absolute->signal_toggled()
+		.connect(sigc::mem_fun(
+			*this,
+			&ControlPanel::handle_rad_absolute_select));
+	spn_hour->signal_value_changed()
+		.connect(sigc::mem_fun(
+			*this,
+			&ControlPanel::handle_add_spins));
+	spn_min->signal_value_changed()
+		.connect(sigc::mem_fun(
+			*this,
+			&ControlPanel::handle_add_spins));
+	spn_duration->signal_value_changed()
+		.connect(sigc::mem_fun(
+			*this,
+			&ControlPanel::handle_add_spins));
+	spn_min->signal_output()
+		.connect(sigc::mem_fun(
+			*this,
+			&ControlPanel::handle_min_spin_output));
 }
 
 
@@ -60,7 +81,12 @@ void ControlPanel::handle_add_click()
 	//Initialize start time spin buttons with local time
 	std::pair<int, int> hhmm = get_hhmm_local();	
 	spn_hour->set_value(hhmm.first * 1.0);
-	spn_min->set_value(hhmm.second * 1.0);
+	
+	Glib::ustring mm = Glib::ustring::format(
+		std::setfill(L'0'), 
+		std::setw(2),
+		hhmm.second);
+	spn_min->set_text(mm);
 
 	pop_add_break->popup();	
 }
@@ -71,4 +97,60 @@ void ControlPanel::handle_rad_relative_select()
 	chk_reoccuring->show();
 	spn_hour->set_value(0.0);
 	spn_min->set_value(5.0);
+}
+
+
+void ControlPanel::handle_rad_absolute_select()
+{
+	chk_reoccuring->set_active(false);
+	chk_reoccuring->hide();
+	std::pair<int, int> hhmm = get_hhmm_local();
+	spn_hour->set_value(hhmm.first * 1.0);
+	spn_min->set_value(hhmm.second * 1.0);
+}
+
+
+void ControlPanel::handle_add_spins()
+{
+	int hour = (int)spn_hour->get_value();
+	int min = (int)spn_min->get_value();
+	int dur = (int)spn_duration->get_value();
+	
+	Glib::ustring desc;
+	if(rad_absolute->get_active())
+	{
+		desc = Glib::ustring::compose(
+			"Add %1 minute break at %2:%3",
+			dur,
+			hour,
+			Glib::ustring::format(std::setfill(L'0'), std::setw(2), min));
+	}
+	else if(!chk_reoccuring->get_active())
+	{
+		desc = Glib::ustring::compose(
+			"Add %1 minute break %2:%3 from now",
+			dur,
+			hour,
+			Glib::ustring::format(std::setfill(L'0'), std::setw(2), min));
+	}
+	else
+	{
+		desc = Glib::ustring::compose(
+			"Add %1 minute break every %2:%3",
+			dur,
+			hour,
+			Glib::ustring::format(std::setfill(L'0'), std::setw(2), min));
+	}
+
+	lbl_break_desc->set_label(desc);
+}
+
+
+bool ControlPanel::handle_min_spin_output()
+{
+	auto adj = spn_min->get_adjustment();
+	int val = (int)adj->get_value();
+	auto mm = Glib::ustring::format(std::setfill(L'0'), std::setw(2), val);
+	spn_min->set_text(mm);
+	return true;
 }

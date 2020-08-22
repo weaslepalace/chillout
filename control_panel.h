@@ -43,6 +43,9 @@ class ControlPanel : public Gtk::Window
 
 	void handle_add_click();
 	void handle_rad_relative_select();
+	void handle_rad_absolute_select();
+	void handle_add_spins();
+	bool handle_min_spin_output();
 
 	private:
 	std::pair<int, int> get_hhmm_local();
