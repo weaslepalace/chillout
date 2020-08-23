@@ -26,18 +26,18 @@ ControlPanel::ControlPanel(BreakList& break_list)
 	builder->get_widget("spn_start_min", spn_min);
 	builder->get_widget("rad_start_rel", rad_relative);
 	builder->get_widget("rad_start_abs", rad_absolute);
-	builder->get_widget("chk_start_reoccuring", chk_reoccuring);
 	builder->get_widget("spn_duration", spn_duration);
 	builder->get_widget("lbl_break_description", lbl_break_desc);
 	builder->get_widget("btn_add_commit", btn_add_commit);
 	builder->get_widget("evt_box_warning", evt_box_warning);
 	builder->get_widget("lbl_warning", lbl_warning);
+	builder->get_widget("spn_reoccuring_count", spn_reoccuring_count);
+	builder->get_widget("lbl_break_cnt", lbl_break_cnt);
 	
 	rad_relative->signal_toggled()
 		.connect(sigc::mem_fun(
 			*this,
 			&ControlPanel::handle_rad_relative_select));
-	
 	rad_absolute->signal_toggled()
 		.connect(sigc::mem_fun(
 			*this,
@@ -51,6 +51,10 @@ ControlPanel::ControlPanel(BreakList& break_list)
 			*this,
 			&ControlPanel::handle_add_spins));
 	spn_duration->signal_value_changed()
+		.connect(sigc::mem_fun(
+			*this,
+			&ControlPanel::handle_add_spins));
+	spn_reoccuring_count->signal_value_changed()
 		.connect(sigc::mem_fun(
 			*this,
 			&ControlPanel::handle_add_spins));
@@ -83,6 +87,50 @@ std::pair<int, int> ControlPanel::get_hhmm_local()
 }
 
 
+Glib::ustring ControlPanel::compose_break_description(
+	int hour,
+	int min,
+	int dur,
+	int cnt,
+	bool absolute)
+{
+	Glib::ustring desc;
+	Glib::ustring mm = Glib::ustring::format(
+		std::setfill(L'0'),
+		std::setw(2),
+		min);
+
+	if(absolute)
+	{
+		desc = Glib::ustring::compose(
+			"Add %1 minute break at %2:%3",
+			dur,
+			hour,
+			mm);
+	}
+	else if(1 == cnt)
+	{
+		desc = Glib::ustring::compose(
+			"Add %1 minute break %2:%3 from now",
+			dur,
+			hour,
+			mm);
+	}
+	else
+	{
+		desc = Glib::ustring::compose(
+			"Add %1 breaks for %2 minute%3  every %4:%5",
+			cnt,
+			dur,
+			dur > 1 ? "s" : "",
+			hour,
+			mm);
+	}
+
+	return desc;
+}
+
+
 /**
  *	Handle the click signal for the ADD button
  */
@@ -100,7 +148,9 @@ void ControlPanel::handle_add_click()
 
 void ControlPanel::handle_rad_relative_select()
 {
-	chk_reoccuring->show();
+	lbl_break_cnt->show();
+	spn_reoccuring_count->show();
+	spn_reoccuring_count->set_value(1.0);
 	spn_hour->set_value(0.0);
 	spn_min->set_value(5.0);
 }
@@ -108,25 +158,12 @@ void ControlPanel::handle_rad_relative_select()
 
 void ControlPanel::handle_rad_absolute_select()
 {
-	chk_reoccuring->set_active(false);
-	chk_reoccuring->hide();
+	lbl_break_cnt->hide();
+	spn_reoccuring_count->hide();
+	spn_reoccuring_count->set_value(1.0);
 	std::pair<int, int> hhmm = get_hhmm_local();
 	spn_hour->set_value(hhmm.first * 1.0);
 	spn_min->set_value(hhmm.second * 1.0);
-}
-
-
-void ControlPanel::handle_chk_reoccuring_select()
-{
-	int hour = (int)spn_hour->get_value();
-	int min = (int)spn_min->get_value();
-	int dur = (int)spn_duration->get_value();
-
-	Glib::ustring desc = Glib::ustring::compose(
-		"Add %1 minute break every %2:%3 from now",
-		dur,
-		hour,
-		Glib::ustring::format(std::setfill(L'0'), std::setw(2), min));
 }
 
 
@@ -135,33 +172,10 @@ void ControlPanel::handle_add_spins()
 	int hour = (int)spn_hour->get_value();
 	int min = (int)spn_min->get_value();
 	int dur = (int)spn_duration->get_value();
-	
-	Glib::ustring desc;
-	if(rad_absolute->get_active())
-	{
-		desc = Glib::ustring::compose(
-			"Add %1 minute break at %2:%3",
-			dur,
-			hour,
-			Glib::ustring::format(std::setfill(L'0'), std::setw(2), min));
-	}
-	else if(!chk_reoccuring->get_active())
-	{
-		desc = Glib::ustring::compose(
-			"Add %1 minute break %2:%3 from now",
-			dur,
-			hour,
-			Glib::ustring::format(std::setfill(L'0'), std::setw(2), min));
-	}
-	else
-	{
-		desc = Glib::ustring::compose(
-			"Add %1 minute break every %2:%3",
-			dur,
-			hour,
-			Glib::ustring::format(std::setfill(L'0'), std::setw(2), min));
-	}
+	int cnt = (int)spn_reoccuring_count->get_value();
+	int abs = rad_absolute->get_active();
 
+	Glib::ustring desc = compose_break_description(hour, min, dur, cnt, abs);
 	lbl_break_desc->set_label(desc);
 }
 

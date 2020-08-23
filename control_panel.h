@@ -37,13 +37,14 @@ class ControlPanel : public Gtk::Window
 	Gtk::SpinButton *spn_hour;
 	Gtk::SpinButton *spn_min;
 	Gtk::SpinButton *spn_duration;
+	Gtk::SpinButton *spn_reoccuring_count;
 	Gtk::RadioButton *rad_relative;
 	Gtk::RadioButton *rad_absolute;
-	Gtk::CheckButton *chk_reoccuring;
 	Gtk::Label *lbl_break_desc;
 	Gtk::Button *btn_add_commit;
 	Gtk::EventBox *evt_box_warning;
 	Gtk::Label *lbl_warning;
+	Gtk::Label *lbl_break_cnt;
 
 	void handle_add_click();
 	void handle_rad_relative_select();
@@ -55,6 +56,12 @@ class ControlPanel : public Gtk::Window
 
 	private:
 	std::pair<int, int> get_hhmm_local();
+	Glib::ustring compose_break_description(
+		int hour,
+		int min,
+		int dur,
+		int cnt,
+		bool absoulte);
 };
 
 

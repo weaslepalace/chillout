@@ -8,7 +8,9 @@
     <property name="page_increment">10</property>
   </object>
   <object class="GtkAdjustment" id="adj_reoccuring_count">
+    <property name="lower">1</property>
     <property name="upper">100</property>
+    <property name="value">1</property>
     <property name="step_increment">1</property>
     <property name="page_increment">10</property>
   </object>
@@ -229,7 +231,7 @@
             <property name="label" translatable="yes">Start Time</property>
           </object>
           <packing>
-            <property name="y">60</property>
+            <property name="y">65</property>
           </packing>
         </child>
         <child>
@@ -244,8 +246,8 @@
             <property name="draw_indicator">True</property>
           </object>
           <packing>
-            <property name="x">210</property>
-            <property name="y">30</property>
+            <property name="x">15</property>
+            <property name="y">135</property>
           </packing>
         </child>
         <child>
@@ -261,8 +263,8 @@
             <property name="group">rad_start_abs</property>
           </object>
           <packing>
-            <property name="x">210</property>
-            <property name="y">60</property>
+            <property name="x">15</property>
+            <property name="y">165</property>
           </packing>
         </child>
         <child>
@@ -275,7 +277,8 @@
 (Minutes)</property>
           </object>
           <packing>
-            <property name="y">180</property>
+            <property name="x">180</property>
+            <property name="y">60</property>
           </packing>
         </child>
         <child>
@@ -321,23 +324,9 @@
           </packing>
         </child>
         <child>
-          <object class="GtkCheckButton" id="chk_start_reoccuring">
-            <property name="label" translatable="yes">Reoccuring</property>
-            <property name="width_request">90</property>
-            <property name="height_request">30</property>
-            <property name="can_focus">True</property>
-            <property name="receives_default">False</property>
-            <property name="draw_indicator">True</property>
-          </object>
-          <packing>
-            <property name="x">240</property>
-            <property name="y">90</property>
-          </packing>
-        </child>
-        <child>
           <object class="GtkSpinButton" id="spn_duration">
-            <property name="width_request">30</property>
-            <property name="height_request">90</property>
+            <property name="width_request">34</property>
+            <property name="height_request">100</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="xalign">0.5</property>
@@ -351,8 +340,8 @@
             <property name="value">5</property>
           </object>
           <packing>
-            <property name="x">90</property>
-            <property name="y">150</property>
+            <property name="x">263</property>
+            <property name="y">30</property>
           </packing>
         </child>
         <child>
@@ -416,15 +405,14 @@ can't be undone!</property>
         </child>
         <child>
           <object class="GtkSpinButton" id="spn_reoccuring_count">
-            <property name="width_request">100</property>
-            <property name="height_request">30</property>
-            <property name="visible">True</property>
+            <property name="width_request">118</property>
+            <property name="height_request">34</property>
             <property name="can_focus">True</property>
             <property name="adjustment">adj_reoccuring_count</property>
           </object>
           <packing>
-            <property name="x">224</property>
-            <property name="y">123</property>
+            <property name="x">15</property>
+            <property name="y">225</property>
           </packing>
         </child>
         <child>
@@ -441,6 +429,18 @@ can't be undone!</property>
           <packing>
             <property name="x">150</property>
             <property name="y">150</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="lbl_break_cnt">
+            <property name="width_request">120</property>
+            <property name="height_request">30</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes"># of Breaks</property>
+          </object>
+          <packing>
+            <property name="x">15</property>
+            <property name="y">195</property>
           </packing>
         </child>
       </object>
