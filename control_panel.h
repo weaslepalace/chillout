@@ -53,6 +53,7 @@ class ControlPanel : public Gtk::Window
 	void handle_add_spins();
 	bool handle_min_spin_output();
 	bool handle_evt_box_warning(GdkEventCrossing *evt);
+	void handle_add_commit();
 
 	private:
 	std::pair<int, int> get_hhmm_local();

@@ -12,12 +12,12 @@ class BreakList : public Gtk::TreeModelColumnRecord
 	public:
 	BreakList();
 	virtual ~BreakList();
-	void add_break(Glib::ustring new_start_time, Glib::ustring new_duration);
+	bool add_break(int hour, int min, int dur);
 	Glib::RefPtr<Gtk::ListStore> ref();	
 
 	Gtk::TreeModelColumn<int> id;
 	Gtk::TreeModelColumn<Glib::ustring> start_time;
-	Gtk::TreeModelColumn<Glib::ustring> duration;
+	Gtk::TreeModelColumn<int> duration;
 
 	Glib::RefPtr<Gtk::ListStore> ref_break_list;
 

@@ -43,21 +43,13 @@ ControlPanel::ControlPanel(BreakList& break_list)
 			*this,
 			&ControlPanel::handle_rad_absolute_select));
 	spn_hour->signal_value_changed()
-		.connect(sigc::mem_fun(
-			*this,
-			&ControlPanel::handle_add_spins));
+		.connect(sigc::mem_fun(*this, &ControlPanel::handle_add_spins));
 	spn_min->signal_value_changed()
-		.connect(sigc::mem_fun(
-			*this,
-			&ControlPanel::handle_add_spins));
+		.connect(sigc::mem_fun(*this, &ControlPanel::handle_add_spins));
 	spn_duration->signal_value_changed()
-		.connect(sigc::mem_fun(
-			*this,
-			&ControlPanel::handle_add_spins));
+		.connect(sigc::mem_fun(*this, &ControlPanel::handle_add_spins));
 	spn_reoccuring_count->signal_value_changed()
-		.connect(sigc::mem_fun(
-			*this,
-			&ControlPanel::handle_add_spins));
+		.connect(sigc::mem_fun(*this, &ControlPanel::handle_add_spins));
 	spn_min->signal_output()
 		.connect(sigc::mem_fun(
 			*this,
@@ -67,6 +59,8 @@ ControlPanel::ControlPanel(BreakList& break_list)
 			*this,
 			&ControlPanel::handle_evt_box_warning));
 		
+	btn_add_commit->signal_clicked()
+		.connect(sigc::mem_fun(*this, &ControlPanel::handle_add_commit));
 }
 
 
@@ -193,4 +187,16 @@ bool ControlPanel::handle_evt_box_warning(GdkEventCrossing *evt)
 {
 	lbl_warning->show();
 	return true;
+}
+
+
+void ControlPanel::handle_add_commit()
+{
+	int hour = (int)spn_hour->get_value();
+	int min = (int)spn_min->get_value();
+	int dur = (int)spn_duration->get_value();
+	int cnt = (int)spn_reoccuring_count->get_value();
+	int abs = rad_absolute->get_active();
+
+	
 }
