@@ -231,7 +231,7 @@
             <property name="label" translatable="yes">Start Time</property>
           </object>
           <packing>
-            <property name="y">60</property>
+            <property name="y">65</property>
           </packing>
         </child>
         <child>
@@ -270,15 +270,15 @@
         <child>
           <object class="GtkLabel" id="lbl_add_new_duration">
             <property name="width_request">90</property>
-            <property name="height_request">38</property>
+            <property name="height_request">30</property>
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="label" translatable="yes">Duration
 (Minutes)</property>
           </object>
           <packing>
-            <property name="x">190</property>
-            <property name="y">50</property>
+            <property name="x">180</property>
+            <property name="y">60</property>
           </packing>
         </child>
         <child>
@@ -340,22 +340,8 @@
             <property name="value">5</property>
           </object>
           <packing>
-            <property name="x">275</property>
-            <property name="y">23</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkButton" id="btn_add_commit">
-            <property name="label" translatable="yes">Commit</property>
-            <property name="width_request">90</property>
-            <property name="height_request">30</property>
-            <property name="visible">True</property>
-            <property name="can_focus">True</property>
-            <property name="receives_default">True</property>
-          </object>
-          <packing>
-            <property name="x">180</property>
-            <property name="y">210</property>
+            <property name="x">263</property>
+            <property name="y">30</property>
           </packing>
         </child>
         <child>
@@ -390,20 +376,6 @@
           </packing>
         </child>
         <child>
-          <object class="GtkLabel" id="lbl_warning">
-            <property name="width_request">150</property>
-            <property name="height_request">30</property>
-            <property name="can_focus">False</property>
-            <property name="label" translatable="yes">Warning: Commit
-can't be undone!</property>
-            <property name="justify">center</property>
-          </object>
-          <packing>
-            <property name="x">150</property>
-            <property name="y">170</property>
-          </packing>
-        </child>
-        <child>
           <object class="GtkSpinButton" id="spn_reoccuring_count">
             <property name="width_request">118</property>
             <property name="height_request">34</property>
@@ -419,7 +391,6 @@ can't be undone!</property>
           <object class="GtkEventBox" id="evt_box_warning">
             <property name="width_request">150</property>
             <property name="height_request">120</property>
-            <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="visible_window">False</property>
             <child>
@@ -441,6 +412,34 @@ can't be undone!</property>
           <packing>
             <property name="x">15</property>
             <property name="y">195</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkButton" id="btn_add_commit">
+            <property name="label" translatable="yes">Commit</property>
+            <property name="width_request">90</property>
+            <property name="height_request">34</property>
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="receives_default">True</property>
+          </object>
+          <packing>
+            <property name="x">180</property>
+            <property name="y">225</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="lbl_warning">
+            <property name="width_request">150</property>
+            <property name="height_request">30</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Warning: Commit
+can't be undone!</property>
+            <property name="justify">center</property>
+          </object>
+          <packing>
+            <property name="x">150</property>
+            <property name="y">180</property>
           </packing>
         </child>
       </object>

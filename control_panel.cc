@@ -4,8 +4,9 @@
 #include <iomanip>
 #include <ctime>
 
-
-ControlPanel::ControlPanel(BreakList& break_list)
+//TODO: Add a check for durations longer that the break period for reoccuring breaks
+ControlPanel::ControlPanel(BreakList& bl)
+	: break_list(bl)
 {
 	builder = Gtk::Builder::create();
 	builder->add_from_file("control.glade");
@@ -113,7 +114,7 @@ Glib::ustring ControlPanel::compose_break_description(
 	else
 	{
 		desc = Glib::ustring::compose(
-			"Add %1 breaks for %2 minute%3  every %4:%5",
+			"Add %1 breaks for %2 minute%3 every %4:%5",
 			cnt,
 			dur,
 			dur > 1 ? "s" : "",
@@ -198,5 +199,19 @@ void ControlPanel::handle_add_commit()
 	int cnt = (int)spn_reoccuring_count->get_value();
 	int abs = rad_absolute->get_active();
 
-	
+	if(abs)
+	{
+		break_list.add_break(hour, min, dur);
+	}
+	else
+	{
+		std::pair<int, int> now = get_hhmm_local();
+		for(int i = 0; i < cnt; i++)
+		{
+			int min_cnt = min * (i + 1);
+			int mm = (now.second + min_cnt) % 60;
+			int hh = (now.first + hour + (min_cnt / 60)) % 24;
+			break_list.add_break(hh, mm, dur);
+		}
+	}
 }

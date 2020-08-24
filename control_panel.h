@@ -29,7 +29,7 @@ class ControlPanel : public Gtk::Window
 	protected:
 	Glib::RefPtr<Gtk::Builder>	builder;
 
-//	BreakList& break_list;
+	BreakList& break_list;
 	Gtk::TreeView *view_break_list;
 //	Gtk::Expander *exp_show_list;
 	Gtk::Button *btn_add;
