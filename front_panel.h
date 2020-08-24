@@ -1,5 +1,5 @@
-#ifndef CHILL_OUT_CONTROL_PANEL
-#define CHILL_OUT_CONTROL_PANEL
+#ifndef CHILL_OUT_FRONT_PANEL
+#define CHILL_OUT_FRONT_PANEL
 
 #include "break_list.h"
 #include <gtkmm/window.h>
@@ -25,13 +25,14 @@ class FrontPanel : public Gtk::Window
 	FrontPanel(BreakList& break_list);
 	virtual ~FrontPanel();
 	Gtk::Window *win;	
+	
+	void bind_break_list();
 
 	protected:
 	Glib::RefPtr<Gtk::Builder>	builder;
 
 	BreakList& break_list;
 	Gtk::TreeView *view_break_list;
-//	Gtk::Expander *exp_show_list;
 	Gtk::Button *btn_add;
 	Gtk::Popover *pop_add_break;	
 	Gtk::SpinButton *spn_hour;
@@ -68,4 +69,4 @@ class FrontPanel : public Gtk::Window
 
 
 
-#endif // CHILL_OUT_CONTROL_PANEL
+#endif // CHILL_OUT_FRONT_PANEL

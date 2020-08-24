@@ -2,6 +2,7 @@
 #include <iomanip>
 
 BreakList::BreakList()
+//	: ref_break_list(Gtk::ListStore::create(*this))
 {
 	add(id);
 	add(start_time);
@@ -10,6 +11,12 @@ BreakList::BreakList()
 }
 
 BreakList::~BreakList() = default;
+
+
+void BreakList::set_ref()
+{
+	ref_break_list = Gtk::ListStore::create(*this);
+}
 
 
 /**

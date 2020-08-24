@@ -14,9 +14,6 @@ FrontPanel::FrontPanel(BreakList& bl)
 	builder->get_widget("win_front_panel", win);
 
 	builder->get_widget("tree_break_list", view_break_list);
-	view_break_list->set_model(break_list.ref());
-	view_break_list->append_column("Starting at", break_list.start_time);
-	view_break_list->append_column("Duration", break_list.duration);
 
 	builder->get_widget("btn_add", btn_add);
 	btn_add->signal_clicked()
@@ -134,6 +131,14 @@ void FrontPanel::initialize_absolute_time()
 	hhmm.second = (hhmm.second + 5) % 60;
 	spn_hour->set_value(hhmm.first * 1.0);
 	spn_min->set_value(hhmm.second * 1.0);
+}
+
+
+void FrontPanel::bind_break_list()
+{
+	view_break_list->set_model(break_list.ref());
+	view_break_list->append_column("Starting at", break_list.start_time);
+	view_break_list->append_column("Duration", break_list.duration);
 }
 
 
