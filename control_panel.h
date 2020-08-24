@@ -57,6 +57,7 @@ class ControlPanel : public Gtk::Window
 
 	private:
 	std::pair<int, int> get_hhmm_local();
+	void initialize_absolute_time();
 	Glib::ustring compose_break_description(
 		int hour,
 		int min,

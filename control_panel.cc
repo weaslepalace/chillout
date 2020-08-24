@@ -126,15 +126,24 @@ Glib::ustring ControlPanel::compose_break_description(
 }
 
 
+void ControlPanel::initialize_absolute_time()
+{
+	//Add 5 minutes to the current time to display as the default value
+	std::pair<int, int> hhmm = get_hhmm_local();
+	hhmm.first = hhmm.first + ((hhmm.second + 5) / 60);
+	hhmm.second = (hhmm.second + 5) % 60;
+	spn_hour->set_value(hhmm.first * 1.0);
+	spn_min->set_value(hhmm.second * 1.0);
+}
+
+
 /**
  *	Handle the click signal for the ADD button
  */
 void ControlPanel::handle_add_click()
 {
 	//Initialize start time spin buttons with local time
-	std::pair<int, int> hhmm = get_hhmm_local();	
-	spn_hour->set_value(hhmm.first * 1.0);
-	spn_min->set_value(hhmm.second * 1.0);	
+	initialize_absolute_time();
 	lbl_warning->hide();
 
 	pop_add_break->popup();	
@@ -156,9 +165,7 @@ void ControlPanel::handle_rad_absolute_select()
 	lbl_break_cnt->hide();
 	spn_reoccuring_count->hide();
 	spn_reoccuring_count->set_value(1.0);
-	std::pair<int, int> hhmm = get_hhmm_local();
-	spn_hour->set_value(hhmm.first * 1.0);
-	spn_min->set_value(hhmm.second * 1.0);
+	initialize_absolute_time();
 }
 
 
