@@ -44,7 +44,7 @@
     <property name="can_focus">False</property>
     <property name="pixbuf">play.ico</property>
   </object>
-  <object class="GtkWindow" id="win_control">
+  <object class="GtkWindow" id="win_front_panel">
     <property name="can_focus">False</property>
     <property name="default_width">420</property>
     <property name="default_height">240</property>
@@ -391,6 +391,7 @@
           <object class="GtkEventBox" id="evt_box_warning">
             <property name="width_request">150</property>
             <property name="height_request">120</property>
+            <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="visible_window">False</property>
             <child>

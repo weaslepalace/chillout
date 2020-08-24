@@ -40,7 +40,7 @@ endif
 set shortmess=aoO
 argglobal
 %argdel
-$argadd control_panel.cc
+$argadd main.cc
 edit main.cc
 set splitbelow splitright
 wincmd _ | wincmd |
@@ -185,15 +185,15 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 7 - ((6 * winheight(0) + 32) / 64)
+let s:l = 15 - ((14 * winheight(0) + 32) / 64)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-7
-normal! 024|
+15
+normal! 05|
 wincmd w
 argglobal
-if bufexists("control_panel.h") | buffer control_panel.h | else | edit control_panel.h | endif
+if bufexists("front_panel.cc") | buffer front_panel.cc | else | edit front_panel.cc | endif
 setlocal keymap=
 setlocal noarabic
 setlocal noautoindent
@@ -318,15 +318,15 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 8 - ((7 * winheight(0) + 32) / 64)
+let s:l = 1 - ((0 * winheight(0) + 32) / 64)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-8
+1
 normal! 0
 wincmd w
 argglobal
-if bufexists("control_panel.cc") | buffer control_panel.cc | else | edit control_panel.cc | endif
+if bufexists("front_panel.h") | buffer front_panel.h | else | edit front_panel.h | endif
 setlocal keymap=
 setlocal noarabic
 setlocal noautoindent
@@ -451,21 +451,21 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 26 - ((25 * winheight(0) + 32) / 64)
+let s:l = 1 - ((0 * winheight(0) + 32) / 64)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-26
-normal! 046|
+1
+normal! 0
 wincmd w
 3wincmd w
 exe 'vert 1resize ' . ((&columns * 90 + 136) / 272)
 exe 'vert 2resize ' . ((&columns * 90 + 136) / 272)
 exe 'vert 3resize ' . ((&columns * 90 + 136) / 272)
 tabnext 1
-badd +0 control_panel.cc
-badd +0 control_panel.h
-badd +0 main.cc
+badd +15 main.cc
+badd +14 front_panel.h
+badd +0 front_panel.cc
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf
 endif
@@ -477,7 +477,6 @@ if filereadable(s:sx)
   exe "source " . fnameescape(s:sx)
 endif
 let &so = s:so_save | let &siso = s:siso_save
-nohlsearch
 doautoall SessionLoadPost
 unlet SessionLoad
 " vim: set ft=vim :

@@ -44,7 +44,7 @@
     <property name="can_focus">False</property>
     <property name="pixbuf">play.ico</property>
   </object>
-  <object class="GtkWindow" id="win_control">
+  <object class="GtkWindow" id="win_front_panel">
     <property name="can_focus">False</property>
     <property name="default_width">420</property>
     <property name="default_height">240</property>

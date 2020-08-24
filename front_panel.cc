@@ -1,17 +1,17 @@
-#include "control_panel.h"
+#include "front_panel.h"
 
 #include <iostream>
 #include <iomanip>
 #include <ctime>
 
 //TODO: Add a check for durations longer that the break period for reoccuring breaks
-ControlPanel::ControlPanel(BreakList& bl)
+FrontPanel::FrontPanel(BreakList& bl)
 	: break_list(bl)
 {
 	builder = Gtk::Builder::create();
-	builder->add_from_file("control.glade");
+	builder->add_from_file("front_panel.glade");
 	
-	builder->get_widget("win_control", win);
+	builder->get_widget("win_front_panel", win);
 
 	builder->get_widget("tree_break_list", view_break_list);
 	view_break_list->set_model(break_list.ref());
@@ -20,7 +20,7 @@ ControlPanel::ControlPanel(BreakList& bl)
 
 	builder->get_widget("btn_add", btn_add);
 	btn_add->signal_clicked()
-		.connect(sigc::mem_fun(*this, &ControlPanel::handle_add_click));
+		.connect(sigc::mem_fun(*this, &FrontPanel::handle_add_click));
 
 	builder->get_widget("pop_add_break", pop_add_break);
 	builder->get_widget("spn_start_hour", spn_hour);
@@ -38,37 +38,37 @@ ControlPanel::ControlPanel(BreakList& bl)
 	rad_relative->signal_toggled()
 		.connect(sigc::mem_fun(
 			*this,
-			&ControlPanel::handle_rad_relative_select));
+			&FrontPanel::handle_rad_relative_select));
 	rad_absolute->signal_toggled()
 		.connect(sigc::mem_fun(
 			*this,
-			&ControlPanel::handle_rad_absolute_select));
+			&FrontPanel::handle_rad_absolute_select));
 	spn_hour->signal_value_changed()
-		.connect(sigc::mem_fun(*this, &ControlPanel::handle_add_spins));
+		.connect(sigc::mem_fun(*this, &FrontPanel::handle_add_spins));
 	spn_min->signal_value_changed()
-		.connect(sigc::mem_fun(*this, &ControlPanel::handle_add_spins));
+		.connect(sigc::mem_fun(*this, &FrontPanel::handle_add_spins));
 	spn_duration->signal_value_changed()
-		.connect(sigc::mem_fun(*this, &ControlPanel::handle_add_spins));
+		.connect(sigc::mem_fun(*this, &FrontPanel::handle_add_spins));
 	spn_reoccuring_count->signal_value_changed()
-		.connect(sigc::mem_fun(*this, &ControlPanel::handle_add_spins));
+		.connect(sigc::mem_fun(*this, &FrontPanel::handle_add_spins));
 	spn_min->signal_output()
 		.connect(sigc::mem_fun(
 			*this,
-			&ControlPanel::handle_min_spin_output));
+			&FrontPanel::handle_min_spin_output));
 	evt_box_warning->signal_enter_notify_event()
 		.connect(sigc::mem_fun(
 			*this,
-			&ControlPanel::handle_evt_box_warning));
+			&FrontPanel::handle_evt_box_warning));
 		
 	btn_add_commit->signal_clicked()
-		.connect(sigc::mem_fun(*this, &ControlPanel::handle_add_commit));
+		.connect(sigc::mem_fun(*this, &FrontPanel::handle_add_commit));
 }
 
 
-ControlPanel::~ControlPanel() = default;
+FrontPanel::~FrontPanel() = default;
 
 
-std::pair<int, int> ControlPanel::get_hhmm_local()
+std::pair<int, int> FrontPanel::get_hhmm_local()
 {
 	std::time_t now = std::time(nullptr);
 	std::tm now_local;
@@ -82,7 +82,7 @@ std::pair<int, int> ControlPanel::get_hhmm_local()
 }
 
 
-Glib::ustring ControlPanel::compose_break_description(
+Glib::ustring FrontPanel::compose_break_description(
 	int hour,
 	int min,
 	int dur,
@@ -126,7 +126,7 @@ Glib::ustring ControlPanel::compose_break_description(
 }
 
 
-void ControlPanel::initialize_absolute_time()
+void FrontPanel::initialize_absolute_time()
 {
 	//Add 5 minutes to the current time to display as the default value
 	std::pair<int, int> hhmm = get_hhmm_local();
@@ -140,7 +140,7 @@ void ControlPanel::initialize_absolute_time()
 /**
  *	Handle the click signal for the ADD button
  */
-void ControlPanel::handle_add_click()
+void FrontPanel::handle_add_click()
 {
 	//Initialize start time spin buttons with local time
 	initialize_absolute_time();
@@ -150,7 +150,7 @@ void ControlPanel::handle_add_click()
 }
 
 
-void ControlPanel::handle_rad_relative_select()
+void FrontPanel::handle_rad_relative_select()
 {
 	lbl_break_cnt->show();
 	spn_reoccuring_count->show();
@@ -160,7 +160,7 @@ void ControlPanel::handle_rad_relative_select()
 }
 
 
-void ControlPanel::handle_rad_absolute_select()
+void FrontPanel::handle_rad_absolute_select()
 {
 	lbl_break_cnt->hide();
 	spn_reoccuring_count->hide();
@@ -169,7 +169,7 @@ void ControlPanel::handle_rad_absolute_select()
 }
 
 
-void ControlPanel::handle_add_spins()
+void FrontPanel::handle_add_spins()
 {
 	int hour = (int)spn_hour->get_value();
 	int min = (int)spn_min->get_value();
@@ -182,7 +182,7 @@ void ControlPanel::handle_add_spins()
 }
 
 
-bool ControlPanel::handle_min_spin_output()
+bool FrontPanel::handle_min_spin_output()
 {
 	int val = (int)spn_min->get_value();
 	auto mm = Glib::ustring::format(std::setfill(L'0'), std::setw(2), val);
@@ -191,14 +191,14 @@ bool ControlPanel::handle_min_spin_output()
 }
 
 
-bool ControlPanel::handle_evt_box_warning(GdkEventCrossing *evt)
+bool FrontPanel::handle_evt_box_warning(GdkEventCrossing *evt)
 {
 	lbl_warning->show();
 	return true;
 }
 
 
-void ControlPanel::handle_add_commit()
+void FrontPanel::handle_add_commit()
 {
 	int hour = (int)spn_hour->get_value();
 	int min = (int)spn_min->get_value();

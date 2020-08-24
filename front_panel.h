@@ -19,11 +19,11 @@
 /**
  *	
  */
-class ControlPanel : public Gtk::Window
+class FrontPanel : public Gtk::Window
 {
 	public:
-	ControlPanel(BreakList& break_list);
-	virtual ~ControlPanel();
+	FrontPanel(BreakList& break_list);
+	virtual ~FrontPanel();
 	Gtk::Window *win;	
 
 	protected:
