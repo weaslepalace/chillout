@@ -31,6 +31,8 @@ FrontPanel::FrontPanel(BreakList& bl)
 	builder->get_widget("lbl_warning", lbl_warning);
 	builder->get_widget("spn_reoccuring_count", spn_reoccuring_count);
 	builder->get_widget("lbl_break_cnt", lbl_break_cnt);
+	builder->get_widget("bar_next_break", bar_next_break);
+	builder->get_widget("lbl_next_brk_cnt", lbl_next_brk_cnt);
 	
 	rad_relative->signal_toggled()
 		.connect(sigc::mem_fun(
@@ -226,4 +228,16 @@ void FrontPanel::handle_add_commit()
 			break_list.add_break(hh, mm, dur);
 		}
 	}
+}
+
+
+void FrontPanel::countdown_to_next_break(double percent, int hour, int min, int sec)
+{
+	Glib::ustring hhmm = Glib::ustring::compose(
+		"%1:%2:%3",
+		Glib::ustring::format(std::setfill(L'0'), std::setw(2), hour),
+		Glib::ustring::format(std::setfill(L'0'), std::setw(2), min),
+		Glib::ustring::format(std::setfill(L'0'), std::setw(2), sec));
+	lbl_next_brk_cnt->set_text(hhmm);
+	bar_next_break->set_value(percent);	
 }

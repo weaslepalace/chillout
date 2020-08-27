@@ -16,6 +16,10 @@ class ChillOut
 	BreakList break_list;
 
 	private:
+	double percent;
+	int hour;
+	int min;
+	int sec;
 	sigc::connection timer_conn;
 	bool handle_timer_tick();	
 };
