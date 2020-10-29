@@ -11,6 +11,10 @@ ChillOut::ChillOut() :
 	//FIXME: This feels clunky
 	break_list.set_ref();
 	front_panel.bind_break_list();
+	
+	//Just a test
+	break_list.add_break(16, 39, 1);
+	break_list.add_break(17, 41, 1);
 }
 
 
@@ -26,25 +30,28 @@ void ChillOut::start_timer()
 
 bool ChillOut::handle_timer_tick()
 {
-	front_panel.countdown_to_next_break(   //Rename this
-		percent,
-		hour % 24,
-		min % 60,
-		sec % 60); 
-	
-	//This is just a test.
-	//	The actual code should pull up the next break, and compute the percent
-	//	of time remaining before the next break, then compute the hours,
-	//	minutes, and seconds until the next break.
-	percent += 0.1;
-	if(percent >= 1.0)
+	std::time_t last = break_list.get_last_break();
+	std::time_t next = break_list.get_next_break();
+	//Prevent divide-by-zero
+	if(next == last)
 	{
-		percent = 0.0;
+		return true;
 	}
-	sec++;
-	min = sec / 60;
-	hour = min / 60;
-	//End test.
+	std::time_t now = std::time(nullptr);
+
+	if(now >= next)
+	{
+		break_list.activate();
+		front_panel.update(1.0, 0, 0, 0);	
+	}
+	else
+	{
+		double percent = static_cast<double>(now - last) / (next - last);
+		std::time_t until = next - now;	
+		int min = until / 60;
+		int hour = min / 60;
+		front_panel.update(percent, hour % 24, min % 60, until % 60);
+	}
 
 	return true;
 }

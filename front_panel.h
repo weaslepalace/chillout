@@ -16,6 +16,7 @@
 #include <gtkmm/label.h>
 #include <gtkmm/eventbox.h>
 #include <gtkmm/levelbar.h>
+#include <gtkmm/progressbar.h>
 
 /**
  *	
@@ -28,7 +29,7 @@ class FrontPanel : public Gtk::Window
 	Gtk::Window *win;	
 	
 	void bind_break_list();
-	void countdown_to_next_break(double percent, int hour, int min, int sec);
+	void update(double percent, int hour, int min, int sec);
  
 	protected:
 	Glib::RefPtr<Gtk::Builder>	builder;
@@ -49,6 +50,7 @@ class FrontPanel : public Gtk::Window
 	Gtk::Label *lbl_warning;
 	Gtk::Label *lbl_break_cnt;
 	Gtk::LevelBar *bar_next_break;
+	Gtk::ProgressBar *pbar_next_break;
 	Gtk::Label *lbl_next_brk_cnt;
 
 	void handle_add_click();
